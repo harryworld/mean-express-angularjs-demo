@@ -6,4 +6,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+router.get('/api/count', function(req, res) {
+  res.json({count: 10});
+});
+
 module.exports = router;
