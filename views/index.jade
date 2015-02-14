@@ -3,3 +3,7 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  p Change the content
+  div(ng-controller="DemoCtrl")
+    p {{count}}
+    button(ng-click="add()") Click me!
