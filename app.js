@@ -6,7 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var mongoose   = require('mongoose');
-mongoose.connect('mongodb://localhost:27017/express-demo');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/express-demo');
 var Bear     = require('./app/models/bear');
 
 var routes = require('./routes/index');
