@@ -7,3 +7,13 @@ block content
   div(ng-controller="DemoCtrl")
     p {{count}}
     button(ng-click="add()") Click me!
+
+  div(ng-init="qty=1;cost=2")
+    b Invoice
+    div() Quantity
+    input(type="number" ng-model= "qty")
+    div() Costs:
+    input(type="number" ng-model="cost")
+    div()
+      b Total:
+      {{qty * cost | currency}}
