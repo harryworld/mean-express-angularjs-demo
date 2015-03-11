@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/api/count', function(req, res) {
-  res.json({count: 10});
+  res.json({count: 1});
 });
 
 router.route('/api/bears')
